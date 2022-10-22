@@ -1,0 +1,31 @@
+.img {
+  grid-area: img;
+  justify-self: center;
+  align-self: end;
+  max-width: 3.5rem;
+}
+
+.name {
+  grid-area: name;
+  font-family: "arbutus";
+  align-self: end;
+  font-size: 2rem;
+}
+
+.tagline {
+  grid-area: tagline;
+  font-style: italic;
+  color: #303030;
+  font-size: 1rem;
+  opacity: 80%;
+}
+
+.container {
+  display: grid;
+  grid-template:
+    [row1-start] "img name " auto [row1-end]
+    [row2-start] ". name " 0.35rem [row2-end]
+    [row3-start] "tagline tagline" 1rem [row3-end]
+    / 3.5rem auto;
+  grid-gap: 0.2rem 0.8rem;
+}

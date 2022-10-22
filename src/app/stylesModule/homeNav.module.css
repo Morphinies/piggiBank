@@ -1,0 +1,25 @@
+.btn1 {
+  grid-area: btn1;
+  align-self: end;
+}
+
+.btn2 {
+  grid-area: btn2;
+  align-self: end;
+}
+
+.homeNav {
+  display: grid;
+  grid-template:
+    [row1-start] "btn1 btn2" auto [row1-end]
+    [row2-start] ". ." 1rem [row2-end]
+    / auto auto;
+
+  grid-column-gap: 0.6rem;
+}
+
+@media (max-width: 560px) {
+  .homeNav {
+    margin-top: 1.5rem;
+  }
+}

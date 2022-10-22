@@ -1,0 +1,108 @@
+.main {
+  flex: 1 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5vh;
+  width: 60%;
+}
+
+.formHeader {
+  justify-content: space-between;
+}
+
+.formContainer {
+  background-color: rgb(48, 48, 48);
+  text-align: center;
+  border-radius: 3px;
+  font-size: 1.15rem;
+  padding: 3vh 5vw;
+  width: 100%;
+}
+
+.formContainer * {
+  color: white;
+  width: 100%;
+}
+
+.titleContainer {
+  margin-bottom: 4vh;
+}
+
+.title {
+  letter-spacing: 0.15rem;
+}
+
+/* input */
+.inputWrapper {
+  margin-bottom: 1vh;
+}
+
+.inputContainer {
+  justify-content: flex-start;
+  padding: 1vh 2vw;
+  display: flex;
+}
+
+.label {
+  text-align: start;
+  padding-top: 1vh;
+  max-width: 30%;
+}
+
+.input {
+  cursor: pointer;
+  color: rgb(48, 48, 48);
+  font-size: 1.1rem;
+  padding: 1vh 1vw;
+}
+
+.errorContainer {
+  height: 1rem;
+}
+
+.errorMessage {
+  color: red;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+/* btn */
+
+.formBtns {
+  width: 70%;
+}
+
+.btnForm {
+  border: 1px solid rgb(248, 248, 248);
+  margin-top: 5vh;
+  color: white;
+}
+
+.btnForm:hover {
+  border: 1px solid rgb(248, 248, 248);
+  background-color: rgb(248, 248, 248);
+  color: rgb(48, 48, 48);
+}
+
+.btnDisabled {
+  opacity: 20%;
+  cursor: not-allowed;
+}
+
+.btnDisabled:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 770px) {
+  .main {
+    width: 100%;
+    padding: 0 2vw;
+  }
+}
+
+@media (max-width: 630px) {
+  .formBtns {
+    width: 100%;
+  }
+}

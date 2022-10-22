@@ -1,0 +1,32 @@
+.regBtns {
+  margin-top: 2vh;
+  justify-content: flex-end;
+}
+
+.title {
+  padding-top: 1vh;
+  text-align: center;
+}
+
+.capabilities {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 7vh;
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 630px) {
+  .regBtns {
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+  }
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

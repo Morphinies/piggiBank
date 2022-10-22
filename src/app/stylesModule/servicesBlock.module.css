@@ -1,0 +1,49 @@
+.gridBlock {
+  grid-area: services;
+  align-self: end;
+}
+
+.wrapper {
+  background-color: rgb(48, 48, 48);
+  padding: 2vh 1.5vw 2vh 0.7vw;
+  border-radius: 3px;
+}
+
+.wrapper * {
+  color: #eaeaea;
+}
+
+.title {
+  padding: 0 2vw;
+  font-weight: 500;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.list {
+  margin-top: 5vh;
+}
+
+.item {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 3vh;
+}
+
+.itemText {
+  padding-top: 0.7vh;
+  margin-left: 0.5vw;
+}
+
+.okeyImg {
+  max-height: 3vh;
+}
+
+@media (max-width: 630px) {
+  .container {
+    margin-top: 2vh;
+  }
+}
