@@ -1,11 +1,3 @@
-.main {
-  flex: 1 0 auto;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 5vh;
-  width: 60%;
-}
-
 .formHeader {
   justify-content: space-between;
 }
@@ -13,10 +5,12 @@
 .formContainer {
   background-color: rgb(48, 48, 48);
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 3px;
   font-size: 1.15rem;
   padding: 3vh 5vw;
-  width: 100%;
+  max-width: 60%;
 }
 
 .formContainer * {
@@ -25,7 +19,7 @@
 }
 
 .titleContainer {
-  margin-bottom: 4vh;
+  margin-bottom: 3rem;
 }
 
 .title {
@@ -34,26 +28,32 @@
 
 /* input */
 .inputWrapper {
-  margin-bottom: 1vh;
+  margin-bottom: 0.8rem;
 }
 
 .inputContainer {
   justify-content: flex-start;
-  padding: 1vh 2vw;
+  padding: 0.8rem 2vw;
   display: flex;
 }
 
 .label {
   text-align: start;
-  padding-top: 1vh;
+  font-weight: bold;
+  padding-top: 0.8rem;
   max-width: 30%;
 }
 
 .input {
+  border-color: aliceblue;
   cursor: pointer;
   color: rgb(48, 48, 48);
   font-size: 1.1rem;
-  padding: 1vh 1vw;
+  padding: 0.8rem 0.8rem;
+}
+
+.input {
+  outline: none;
 }
 
 .errorContainer {
@@ -94,6 +94,12 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+@media (max-width: 970px) {
+  .formContainer {
+    max-width: 80%;
+  }
+}
+
 @media (max-width: 770px) {
   .main {
     width: 100%;
@@ -101,8 +107,11 @@
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 660px) {
   .formBtns {
     width: 100%;
+  }
+  .formContainer {
+    max-width: 100%;
   }
 }

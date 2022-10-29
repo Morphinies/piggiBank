@@ -9,7 +9,7 @@ const TravelFunc = () => {
   return (
     <>
       <header className={"header contWidth"}>
-        <img className="logoSvg" src={logo} />
+        <img className="logoSvg" src={logo} alt="logo" />
         <nav className={"headBtns " + s.funcBtns}>
           <button onClick={() => navigate("/")} className="btn headBtn">
             на главную

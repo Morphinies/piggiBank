@@ -1,10 +1,4 @@
-.regBtns {
-  margin-top: 2vh;
-  justify-content: flex-end;
-}
-
 .title {
-  padding-top: 1vh;
   text-align: center;
 }
 
@@ -16,7 +10,7 @@
   width: 100%;
 }
 
-@media (max-width: 630px) {
+@media (max-width: 660px) {
   .regBtns {
     width: 100%;
   }

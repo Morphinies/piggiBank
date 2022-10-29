@@ -2,19 +2,17 @@
   grid-area: functions;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0.5rem;
+  gap: 0.5rem;
 }
 
 .funcLink {
-  padding: 2vh 2vw;
   display: grid;
   grid-template:
-    [row1-start] "." auto [row1-end]
-    [row2-start] "name" 20% [row2-end]
-    [row3-start] "." 1.5rem [row3-end]
-    [row4-start] "img" 40% [row4-end]
-    [row5-start] "." auto [row5-end]
+    [row1-start] "name" 30% [row1-end]
+    [row2-start] "img" 40% [row2-end]
     / 100%;
+  row-gap: 1.5rem;
+  padding: 2vh 2vw;
 }
 
 .funcLink:hover p {
@@ -29,6 +27,7 @@
 
 .funcName {
   grid-area: name;
+  align-self: end;
   letter-spacing: 0.03vw;
   transition: all 0.5s;
   font-weight: bold;
@@ -46,5 +45,8 @@
   height: 7rem;
 }
 
-@media (max-width: 730px) {
+@media (max-width: 360px) {
+  .functionsList {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
