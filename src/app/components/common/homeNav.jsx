@@ -1,29 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import s from "../../stylesModule/homeNav.module.css";
 
-const HomeNav = ({ currentUser, handleExit }) => {
+const HomeNav = ({ currentUser }) => {
+  const handleExit = () => {
+    localStorage.removeItem("userOfPiggiBank");
+    window.location.reload();
+  };
   return (
-    <nav className={s.homeNav}>
+    <nav className="nav">
       {currentUser ? (
         <>
-          <Link to="userPage" className={"btn " + s.btn1}>
+          <Link to="userPage" className="btn">
             личный кабинет
           </Link>
-          <button
-            onClick={() => handleExit()}
-            to="/"
-            className={"btn " + s.btn2}
-          >
+          <button onClick={() => handleExit()} to="/" className="btn">
             выход
           </button>
         </>
       ) : (
         <>
-          <Link to="regPage" className={"btn headBtn " + s.btn1}>
+          <Link to="regPage" className="btn">
             зарегистрироваться
           </Link>
-          <Link to="authPage" className={"btn headBtn " + s.btn2}>
+          <Link to="authPage" className="btn">
             войти
           </Link>
         </>

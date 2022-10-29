@@ -1,5 +1,5 @@
 import React from "react";
-import s from "../../../stylesModule/function.module.css";
+// import s from "../../../stylesModule/function.module.css";
 import logo from "../../../../img/logo.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -8,7 +8,7 @@ const PensionFunc = () => {
   return (
     <>
       <header className={"header contWidth"}>
-        <img className="logoSvg" src={logo} />
+        <img className="logoSvg" src={logo} alt="logo" />
         <nav className={"headBtns"}>
           <button onClick={() => navigate("/")} className="btn headBtn">
             на главную

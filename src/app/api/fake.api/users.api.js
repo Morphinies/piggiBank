@@ -50,4 +50,6 @@ const addUser = ({ userData }) => {
   });
 };
 
-export default { fetchAll, addUser, checkAuthData };
+const users = { fetchAll, addUser, checkAuthData };
+
+export default users;

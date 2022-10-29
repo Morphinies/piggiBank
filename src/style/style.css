@@ -11,14 +11,18 @@
 
 html,
 body,
+.wrapper,
 .container {
   height: 100%;
 }
 
-.container {
-  margin-top: 0.2rem;
+.wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  margin-top: 0.2rem;
 }
 
 html {
@@ -38,6 +42,15 @@ li {
   list-style: none;
 }
 
+.content {
+  flex: 1 1 auto;
+  margin: 4rem 1rem;
+}
+
+.redSpan {
+  color: red;
+}
+
 /*  areas  */
 
 .headerArea {
@@ -48,8 +61,6 @@ li {
 }
 
 .mainArea {
-  flex: 1 1 auto;
-  margin: 4rem 1rem;
   display: grid;
   grid-template:
     [row1-start] "blockquote  . functions" 30% [row1-end]
@@ -62,23 +73,47 @@ li {
   background-color: #303030;
 }
 
+/* navigation */
+
+.nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.nav * {
+  align-self: end;
+}
+
 /* button */
 
 .btn {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #303030;
+  padding: 0.5rem 1.5rem;
+  font-family: "forum";
   transition: all 0.3s;
   text-align: center;
   border-radius: 3px;
   font-size: 1.1rem;
   color: #303030;
-  padding: 1vh 2vw;
   cursor: pointer;
 }
 
 .btn:hover {
   background-color: #303030;
   color: #eaeaea;
+}
+
+.btnDisabled {
+  opacity: 20%;
+}
+
+.btnDisabled:hover {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0);
+  color: #303030;
 }
 
 /* footer */
@@ -95,6 +130,35 @@ li {
   display: flex;
   justify-content: space-between;
   margin: 80px 60px 0px 60px;
+}
+
+/* loading */
+
+.loading {
+  flex: 1 1 auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30vh;
+  text-align: center;
+}
+
+.loadingText {
+  display: inline-block;
+  font-weight: bold;
+  line-height: 3rem;
+  font-size: 2rem;
+}
+
+.loadingImg {
+  transition-timing-function: linear;
+  transition: all 120s;
+  margin-left: 1rem;
+  float: right;
+  width: 3rem;
+}
+
+.startAnimation {
+  transform: rotate(-36000deg);
 }
 
 /* fonts */
@@ -125,7 +189,7 @@ li {
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 660px) {
   html {
     font-size: 14px;
   }
@@ -137,5 +201,13 @@ li {
   }
   .container {
     grid-template-rows: 15% auto 2rem;
+  }
+  .nav {
+    margin-top: 1.5rem;
+  }
+  .oneBtn {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "../../stylesModule/form.module.css";
 
-const TextField = ({ handleChange, name, label, error }) => {
+const TextField = ({ handleChange, name, label, error, type }) => {
   return (
     <div className={s.inputWrapper}>
       <div className={s.inputContainer}>
@@ -9,7 +9,7 @@ const TextField = ({ handleChange, name, label, error }) => {
         <input
           autoComplete=""
           className={s.input}
-          type="text"
+          type={type}
           name={name}
           onChange={(e) => handleChange(e)}
         />

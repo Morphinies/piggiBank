@@ -1,20 +1,17 @@
 import React from "react";
 import HomeNav from "./homeNav";
 import HomeLogo from "./homeLogo";
+import FormNav from "./formNav";
+import FuncNav from "./funcNav";
 
-const handleExit = () => {
-  localStorage.removeItem("userOfPiggiBank");
-  window.location.reload();
-};
-
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, logoName, logoTagline, page }) => {
   return (
     <header className="headerArea">
-      <HomeLogo
-        logoName="Piggi Bank"
-        logoTagline="- я покажу куда пропадают твои деньги"
-      />
-      <HomeNav currentUser={currentUser} handleExit={handleExit} />
+      <HomeLogo logoName={logoName} logoTagline={logoTagline} />
+      {page === "main" && <HomeNav currentUser={currentUser} />}
+      {page === "authPage" && <FormNav page="regPage" />}
+      {page === "regPage" && <FormNav page="authPage" />}
+      {page === "machineFunc" && <FuncNav />}
     </header>
   );
 };
