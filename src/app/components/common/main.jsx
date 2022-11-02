@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesBlock from "./servicesBlock";
 import Functions from "./functions";
-import Blockquote from "./blockquote";
+import Blockquote from "./blockquote/blockquote";
 
 const Main = ({ servicesList, functionsList }) => {
   return (

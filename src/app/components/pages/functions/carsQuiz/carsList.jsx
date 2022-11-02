@@ -1,7 +1,7 @@
 import s from "../../../../stylesModule/function.module.css";
 import React, { useState, useEffect } from "react";
-import Loading from "../../../common/loading";
 import api from "../../../../api";
+import Loading from "../../../common/loading/loading";
 
 const CarsList = ({ сhooseСar }) => {
   const [loading, setLoading] = useState(true);

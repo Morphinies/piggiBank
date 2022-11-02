@@ -4,11 +4,11 @@ import ApprovePercent from "./approvePercent";
 import React, { useState } from "react";
 import ApproveSalary from "./approveSalary";
 import Result from "./result";
+import Calculations from "./calculations";
 
 const PopUpWindow = ({ closeWindow, choosedPerсent, car }) => {
   const [popUpQuiz, setPopUpQuiz] = useState("percent");
   const [salary, setSalary] = useState("");
-  salary && console.log(salary);
   const approvePercent = () => {
     setPopUpQuiz("salary");
   };
@@ -44,7 +44,15 @@ const PopUpWindow = ({ closeWindow, choosedPerсent, car }) => {
           />
         )}
         {popUpQuiz === "result" && (
-          <Result percent={choosedPerсent} salary={salary} />
+          <Result
+            percent={choosedPerсent}
+            salary={salary}
+            back={() => setPopUpQuiz("salary")}
+            calculations={() => setPopUpQuiz("calculations")}
+          />
+        )}
+        {popUpQuiz === "calculations" && (
+          <Calculations car={car} percent={choosedPerсent} salary={salary} />
         )}
       </main>
     </div>

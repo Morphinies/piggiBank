@@ -5,9 +5,8 @@ import { useNavigate } from "react-router-dom";
 import TextField from "../forms/textField";
 import PasField from "../forms/pasField";
 import api from "../../api";
-import Footer from "../common/footer";
-import HomeLogo from "../common/homeLogo";
-import FormNav from "../common/formNav";
+import Header from "../common/header/header";
+import Footer from "../common/footer/footer";
 
 const RegPage = () => {
   const navigate = useNavigate();
@@ -94,10 +93,7 @@ const RegPage = () => {
 
   return (
     <div className="wrapper">
-      <header className="headerArea">
-        <HomeLogo />
-        <FormNav page="regPage" />
-      </header>
+      <Header />
 
       <div className="content">
         <div className={s.formContainer}>

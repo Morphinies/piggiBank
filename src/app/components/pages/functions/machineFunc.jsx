@@ -3,9 +3,9 @@ import ApprovedCar from "./carsQuiz/approvedCar";
 import PopUpWindow from "./carsQuiz/popUpWindow";
 import ChoosedCar from "./carsQuiz/choosedCar";
 import CarsList from "./carsQuiz/carsList";
-import Footer from "../../common/footer";
-import Header from "../../common/header";
 import React, { useState } from "react";
+import Header from "../../common/header/header";
+import Footer from "../../common/footer/footer";
 
 const MachineFunc = () => {
   const [currentBlock, setCurrentBlock] = useState("cars");
@@ -14,7 +14,7 @@ const MachineFunc = () => {
   const [car, setCar] = useState({});
 
   const сhooseСar = (car) => {
-    setCar({ name: car.name, price: car.price, img: car.img });
+    setCar({ name: car.name, price: car.price, img: car.img, year: car.year });
     setCurrentBlock("car");
   };
 
@@ -40,7 +40,7 @@ const MachineFunc = () => {
   return (
     <>
       <div className={"wrapper " + (choosedPerсent && s.blur)}>
-        <Header page={"machineFunc"} />
+        <Header page={"function"} />
 
         <main className="content">
           {/*выбор машины */}

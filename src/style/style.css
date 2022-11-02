@@ -1,9 +1,9 @@
 /*  Common styles  */
 
 * {
-  color: #303030;
   letter-spacing: 0.015vw;
   box-sizing: border-box;
+  color: #303030;
   cursor: default;
   padding: 0;
   margin: 0;
@@ -17,12 +17,9 @@ body,
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
-  margin-top: 0.2rem;
+  display: grid;
+  margin-top: 1rem;
+  grid-template-rows: auto 1fr auto;
 }
 
 html {
@@ -53,13 +50,6 @@ li {
 
 /*  areas  */
 
-.headerArea {
-  flex: 0 1 auto;
-  margin: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 .mainArea {
   display: grid;
   grid-template:
@@ -68,22 +58,16 @@ li {
     / 45% 10% 45%;
 }
 
-.footerArea {
-  flex: 0 1 auto;
-  background-color: #303030;
-}
-
 /* navigation */
 
 .nav {
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .nav * {
-  align-self: end;
+  align-self: center;
 }
 
 /* button */
@@ -116,13 +100,9 @@ li {
   color: #303030;
 }
 
-/* footer */
-
-.footerText {
-  line-height: 2rem;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #eaeaea;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 /* section */
@@ -130,35 +110,6 @@ li {
   display: flex;
   justify-content: space-between;
   margin: 80px 60px 0px 60px;
-}
-
-/* loading */
-
-.loading {
-  flex: 1 1 auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 30vh;
-  text-align: center;
-}
-
-.loadingText {
-  display: inline-block;
-  font-weight: bold;
-  line-height: 3rem;
-  font-size: 2rem;
-}
-
-.loadingImg {
-  transition-timing-function: linear;
-  transition: all 120s;
-  margin-left: 1rem;
-  float: right;
-  width: 3rem;
-}
-
-.startAnimation {
-  transform: rotate(-36000deg);
 }
 
 /* fonts */
@@ -179,6 +130,9 @@ li {
 /* media queries */
 
 @media (max-width: 730px) {
+  .wrapper {
+    margin-top: 1.5rem;
+  }
   .mainArea {
     grid-template:
       [row1-start] "blockquote" auto [row1-end]
@@ -186,6 +140,15 @@ li {
       [row3-start] "services" auto [row3-end]
       / 100%;
     grid-row-gap: 5rem;
+  }
+  .content {
+    margin-top: 3rem;
+  }
+  .nav {
+    grid-template-columns: repeat(auto-fill, 1fr);
+  }
+  .oneBtn {
+    margin: 0 20%;
   }
 }
 
@@ -196,18 +159,7 @@ li {
 }
 
 @media (max-width: 560px) {
-  .headerArea {
-    flex-direction: column;
-  }
   .container {
     grid-template-rows: 15% auto 2rem;
-  }
-  .nav {
-    margin-top: 1.5rem;
-  }
-  .oneBtn {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

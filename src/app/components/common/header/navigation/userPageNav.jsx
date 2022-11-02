@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const UserPageNav = () => {
   return (
     <nav className="nav oneBtn">
-      <Link to="/" className={"btn navBtn"}>
+      <Link to="/" className={"btn"}>
         на главную
       </Link>
     </nav>

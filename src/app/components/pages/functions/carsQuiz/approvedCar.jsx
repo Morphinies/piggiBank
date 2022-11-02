@@ -2,13 +2,17 @@ import s from "../../../../stylesModule/function.module.css";
 import React from "react";
 
 const ApprovedCar = ({ car, changeCar, choosePerсent }) => {
+  const regExp = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  };
+
   return (
     <>
       <h1 className={s.title}>{car.name}</h1>
       <div className={s.calcBlock}>
         <p className={s.calcText}>
           Средняя стоимость машины:
-          <span className="redSpan"> {car.price}</span> р.
+          <span className="redSpan"> {regExp(car.price)}</span> р.
         </p>
         <p className={s.calcQuestion}>
           Выберите, какой частью вашего заработка вы готовы жертвовать ради

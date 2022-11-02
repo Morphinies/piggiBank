@@ -1,0 +1,11 @@
+.footer {
+  flex: 0 1 auto;
+  background-color: #303030;
+}
+
+.footerText {
+  line-height: 2rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #eaeaea;
+}

@@ -1,0 +1,13 @@
+.header {
+  flex: 0 1 auto;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 730px) {
+  .header {
+    row-gap: 1.5rem;
+    flex-direction: column-reverse;
+  }
+}

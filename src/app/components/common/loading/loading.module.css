@@ -1,0 +1,29 @@
+.container {
+  margin-bottom: 10vh;
+  flex: 1 1 auto;
+  display: grid;
+}
+
+.loadingBlock {
+  grid-template-columns: auto auto;
+  font-weight: bold;
+  column-gap: 1rem;
+  font-size: 2rem;
+  display: grid;
+}
+
+.loadingText,
+.loadingBlock {
+  justify-self: center;
+  align-self: center;
+}
+
+.loadingImg {
+  transition-timing-function: linear;
+  transition: all 120s;
+  width: 3rem;
+}
+
+.startAnimation {
+  transform: rotate(-36000deg);
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import s from "../../stylesModule/form.module.css";
 
-const TextField = ({ handleChange, name, label, error, type }) => {
+const TextField = ({ handleChange, name, label, error, type, value }) => {
   return (
     <div className={s.inputWrapper}>
       <div className={s.inputContainer}>
@@ -12,6 +12,7 @@ const TextField = ({ handleChange, name, label, error, type }) => {
           type={type}
           name={name}
           onChange={(e) => handleChange(e)}
+          value={value}
         />
       </div>
       <div className={s.errorContainer}>

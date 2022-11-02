@@ -1,0 +1,62 @@
+.blockquote {
+  grid-area: blockquote;
+  align-self: flex-start;
+  display: grid;
+  grid-template:
+    "bookmark quote" auto
+    "bookmark author" 2rem
+    / auto 1fr;
+  column-gap: 0.5rem;
+}
+
+.bookmark {
+  background-color: #303030;
+  border-radius: 3px;
+  grid-area: bookmark;
+  width: 0.5rem;
+}
+
+.quote {
+  grid-area: quote;
+}
+
+.author {
+  grid-area: author;
+}
+
+.author,
+.quote {
+  display: grid;
+  align-self: center;
+}
+
+/* .wrapper {
+  grid-area: blockquote;
+}
+
+.container {
+  background-color: #303030;
+  padding: 2vh 1.5vw 2vh 1vw;
+  border-radius: 3px;
+  display: flex;
+}
+
+.blockquote {
+  margin-left: 1.3vw;
+  padding: 0.5vh 0;
+}
+
+.verticalLine {
+}
+
+.quote,
+.author {
+  color: #eaeaea;
+}
+
+.author {
+  font-size: 0.9rem;
+  margin-top: 2vh;
+  font-style: italic;
+  float: right;
+} */

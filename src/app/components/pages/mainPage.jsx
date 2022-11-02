@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Footer from "../common/footer";
-import Header from "../common/header";
 import Main from "../common/main";
 import api from "../../api";
-import Loading from "../common/loading";
+import Loading from "../common/loading/loading";
+import Header from "../common/header/header";
+import Footer from "../common/footer/footer";
 
 const MainPage = ({ currentUser }) => {
   const [servicesList, setServicesList] = useState();
@@ -14,6 +14,7 @@ const MainPage = ({ currentUser }) => {
     api.services.fetchAll().then((data) => setServicesList(data));
     api.functions.fetchAll().then((data) => setFunctionsList(data));
   }, []);
+
   useEffect(() => {
     servicesList && functionsList && setLoading(false);
   }, [servicesList, functionsList]);
@@ -22,9 +23,8 @@ const MainPage = ({ currentUser }) => {
     <div className="wrapper">
       <Header
         currentUser={currentUser}
-        logoName="Piggi Bank"
+        logoName="Piggy Bank"
         logoTagline="- я покажу куда пропадают твои деньги!"
-        page="main"
       />
 
       {loading ? (

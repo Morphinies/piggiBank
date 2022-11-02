@@ -4,13 +4,11 @@ import { Link } from "react-router-dom";
 const FormNav = ({ page }) => {
   return (
     <nav className="nav">
-      {page === "regPage" && (
+      {page === "/regPage" ? (
         <Link to="/authPage" className="btn">
           войти
         </Link>
-      )}
-
-      {page === "authPage" && (
+      ) : (
         <Link to="/regPage" className="btn">
           зарегистрироваться
         </Link>

@@ -8,8 +8,13 @@ const ApproveSalary = ({ choosedPerсent, approveSalary }) => {
     salary: "",
   });
 
+  const regExp = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  };
+
   const handleChange = ({ target }) => {
-    setData((prevState) => ({ ...prevState, [target.name]: target.value }));
+    target.value.split(" ").join("") >= 0 &&
+      setData((prevState) => ({ ...prevState, [target.name]: target.value }));
   };
 
   // validation
@@ -55,12 +60,13 @@ const ApproveSalary = ({ choosedPerсent, approveSalary }) => {
           handleChange={handleChange}
           name="salary"
           label="руб./мес."
-          type="number"
+          type="text"
+          value={regExp(data.salary.split(" ").join(""))}
           error={errors.salary}
         />
         <button
           type="button"
-          onClick={() => approveSalary(data.salary)}
+          onClick={() => approveSalary(data.salary.split(" ").join(""))}
           className={"btn " + (!isValid && "btnDisabled")}
           disabled={!isValid && "disabled"}
         >
