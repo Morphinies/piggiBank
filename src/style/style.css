@@ -1,13 +1,4 @@
-/*  Common styles  */
-
-* {
-  letter-spacing: 0.015vw;
-  box-sizing: border-box;
-  color: #303030;
-  cursor: default;
-  padding: 0;
-  margin: 0;
-}
+/*  location of common elements  */
 
 html,
 body,
@@ -20,6 +11,32 @@ body,
   display: grid;
   margin-top: 1rem;
   grid-template-rows: auto 1fr auto;
+}
+
+.content {
+  margin: 3rem 1rem;
+}
+
+/* section ???!!!*/
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 60px 0px 60px;
+}
+
+/*  Common styles for elements  */
+
+* {
+  letter-spacing: 0.02vw;
+  box-sizing: border-box;
+  color: #303030;
+  cursor: default;
+  padding: 0;
+  margin: 0;
+}
+
+.redSpan {
+  color: red;
 }
 
 html {
@@ -39,37 +56,6 @@ li {
   list-style: none;
 }
 
-.content {
-  flex: 1 1 auto;
-  margin: 4rem 1rem;
-}
-
-.redSpan {
-  color: red;
-}
-
-/*  areas  */
-
-.mainArea {
-  display: grid;
-  grid-template:
-    [row1-start] "blockquote  . functions" 30% [row1-end]
-    [row2-start] "services  . functions" 70% [row2-end]
-    / 45% 10% 45%;
-}
-
-/* navigation */
-
-.nav {
-  display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 0.5rem;
-}
-
-.nav * {
-  align-self: center;
-}
-
 /* button */
 
 .btn {
@@ -77,10 +63,10 @@ li {
   border: 1px solid #303030;
   padding: 0.5rem 1.5rem;
   font-family: "forum";
-  transition: all 0.3s;
+  transition: all 0.5s;
   text-align: center;
   border-radius: 3px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #303030;
   cursor: pointer;
 }
@@ -98,18 +84,6 @@ li {
   cursor: default;
   background-color: rgba(0, 0, 0, 0);
   color: #303030;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-/* section */
-.section {
-  display: flex;
-  justify-content: space-between;
-  margin: 80px 60px 0px 60px;
 }
 
 /* fonts */
@@ -132,14 +106,6 @@ input::-webkit-inner-spin-button {
 @media (max-width: 730px) {
   .wrapper {
     margin-top: 1.5rem;
-  }
-  .mainArea {
-    grid-template:
-      [row1-start] "blockquote" auto [row1-end]
-      [row2-start] "functions" auto [row2-end]
-      [row3-start] "services" auto [row3-end]
-      / 100%;
-    grid-row-gap: 5rem;
   }
   .content {
     margin-top: 3rem;

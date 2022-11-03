@@ -1,12 +1,13 @@
+import TextField from "../../common/forms/textField";
+import { validator } from "../../../utils/validator";
+import PasField from "../../common/forms/pasField";
 import React, { useEffect, useState } from "react";
-import s from "../../stylesModule/form.module.css";
-import { validator } from "../../utils/validator";
+import Header from "../../common/header/header";
+import Footer from "../../common/footer/footer";
 import { useNavigate } from "react-router-dom";
-import TextField from "../forms/textField";
-import PasField from "../forms/pasField";
-import api from "../../api";
-import Header from "../common/header/header";
-import Footer from "../common/footer/footer";
+import Submit from "../../common/forms/submit";
+import s from "./input.module.css";
+import api from "../../../api";
 
 const AuthPage = () => {
   const navigate = useNavigate();
@@ -85,14 +86,11 @@ const AuthPage = () => {
               name="password"
               error={errors.password}
             />
-            <button
-              type="button"
-              onClick={handleSubmit}
-              className={s.btnForm + " btn " + (!isValid && s.btnDisabled)}
-              disabled={!isValid && "disabled"}
-            >
-              войти
-            </button>
+            <Submit
+              name="Войти"
+              isValid={isValid}
+              handleSubmit={handleSubmit}
+            />
           </form>
         </div>
       </div>

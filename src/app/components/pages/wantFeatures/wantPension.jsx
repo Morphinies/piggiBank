@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../common/header/header";
 
-const HomeFunc = () => {
+const WantPension = () => {
   return (
     <div className="wrapper">
       <Header page={"function"} />
@@ -9,4 +9,4 @@ const HomeFunc = () => {
   );
 };
 
-export default HomeFunc;
+export default WantPension;

@@ -1,0 +1,45 @@
+.list {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-area: functions;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#link {
+  display: grid;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+#link:hover p {
+  color: #eaeaea;
+}
+
+#link:hover img {
+  filter: brightness(100);
+  filter: invert(100%);
+}
+
+.name {
+  letter-spacing: 0.1vw;
+  transition: all 0.5s;
+  font-weight: bold;
+  font-size: 1.2rem;
+  align-self: end;
+  cursor: pointer;
+}
+
+.img {
+  transition: all 0.5s;
+  justify-self: center;
+  align-self: center;
+  max-width: 12rem;
+  cursor: pointer;
+  height: 7rem;
+}
+
+@media (max-width: 360px) {
+  .list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

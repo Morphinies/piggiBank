@@ -1,4 +1,5 @@
 import React from "react";
+import s from "./nav.module.css";
 import { Link } from "react-router-dom";
 
 const HomeNav = ({ currentUser }) => {
@@ -7,7 +8,7 @@ const HomeNav = ({ currentUser }) => {
     window.location.reload();
   };
   return (
-    <nav className="nav">
+    <nav className={s.nav}>
       {currentUser ? (
         <>
           <Link to="userPage" className="btn">

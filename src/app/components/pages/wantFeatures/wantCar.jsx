@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import Header from "../../common/header/header";
 import Footer from "../../common/footer/footer";
 
-const MachineFunc = () => {
+const WantCar = () => {
   const [currentBlock, setCurrentBlock] = useState("cars");
   const [choosedPerсent, setChoosedPerсent] = useState("");
   const [carApproved, setCarApproved] = useState(false);
@@ -79,4 +79,4 @@ const MachineFunc = () => {
   );
 };
 
-export default MachineFunc;
+export default WantCar;

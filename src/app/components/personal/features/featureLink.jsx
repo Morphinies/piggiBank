@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import s from "../../stylesModule/feature.module.css";
+import s from "./feature.module.css";
 
 const FeatureLink = ({ name, link }) => {
   return (

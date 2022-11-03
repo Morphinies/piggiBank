@@ -1,9 +1,10 @@
 import React from "react";
+import s from "./nav.module.css";
 import { Link } from "react-router-dom";
 
 const FormNav = ({ page }) => {
   return (
-    <nav className="nav">
+    <nav className={s.nav}>
       {page === "/regPage" ? (
         <Link to="/authPage" className="btn">
           войти

@@ -1,5 +1,5 @@
 import React from "react";
-import s from "../../stylesModule/form.module.css";
+import s from "./form.module.css";
 
 const TextField = ({ handleChange, name, label, error, type, value }) => {
   return (

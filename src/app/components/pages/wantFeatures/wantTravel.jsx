@@ -2,9 +2,7 @@ import React from "react";
 import s from "../../../stylesModule/function.module.css";
 import Header from "../../common/header/header";
 
-const TravelFunc = () => {
-  // const navigate = useNavigate();
-
+const WantTravel = () => {
   return (
     <div className="wrapper">
       <Header page={"function"} />
@@ -15,4 +13,4 @@ const TravelFunc = () => {
   );
 };
 
-export default TravelFunc;
+export default WantTravel;

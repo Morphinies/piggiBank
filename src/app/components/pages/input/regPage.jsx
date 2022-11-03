@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import s from "../../stylesModule/form.module.css";
-import { validator } from "../../utils/validator";
+import s from "./input.module.css";
+import { validator } from "../../../utils/validator";
 import { useNavigate } from "react-router-dom";
-import TextField from "../forms/textField";
-import PasField from "../forms/pasField";
-import api from "../../api";
-import Header from "../common/header/header";
-import Footer from "../common/footer/footer";
+import TextField from "../../common/forms/textField";
+import PasField from "../../common/forms/pasField";
+import api from "../../../api";
+import Header from "../../common/header/header";
+import Footer from "../../common/footer/footer";
+import Submit from "../../common/forms/submit";
 
 const RegPage = () => {
   const navigate = useNavigate();
@@ -94,8 +95,7 @@ const RegPage = () => {
   return (
     <div className="wrapper">
       <Header />
-
-      <div className="content">
+      <main className="content">
         <div className={s.formContainer}>
           <div className={s.titleContainer}>
             <h1 className={s.title}>Регистрация</h1>
@@ -129,17 +129,22 @@ const RegPage = () => {
               name="repeatPassword"
               error={errors.repeatPassword}
             />
-            <button
+            <Submit
+              name="Зарегистрироваться"
+              isValid={isValid}
+              handleSubmit={handleSubmit}
+            />
+            {/* <button
               type="button"
               onClick={handleSubmit}
               className={s.btnForm + " btn " + (!isValid && s.btnDisabled)}
               disabled={!isValid && "disabled"}
             >
               Зарегистрироваться
-            </button>
+            </button> */}
           </form>
         </div>
-      </div>
+      </main>
 
       <Footer />
     </div>

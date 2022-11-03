@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../../common/header/header";
 
-const PensionFunc = () => {
+const WantHome = () => {
   return (
     <div className="wrapper">
       <Header page={"function"} />
@@ -9,4 +9,4 @@ const PensionFunc = () => {
   );
 };
 
-export default PensionFunc;
+export default WantHome;

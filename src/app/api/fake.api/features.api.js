@@ -3,7 +3,7 @@ import imgHouse from "../../../img/house.svg";
 import imgTravel from "../../../img/travel.svg";
 import imgPension from "../../../img/pension.svg";
 
-const functions = [
+const features = [
   { name: "Хочу машину", value: "wantMachine", img: imgCar },
   { name: "Хочу дом", value: "wantHome", img: imgHouse },
   { name: "Хочу в путешествие", value: "wantTravel", img: imgTravel },
@@ -13,10 +13,10 @@ const functions = [
 const fetchAll = () =>
   new Promise((resolve) => {
     window.setTimeout(() => {
-      resolve(functions);
+      resolve(features);
     }, 1000);
   });
 
-const functionsList = { fetchAll };
+const featuresList = { fetchAll };
 
-export default functionsList;
+export default featuresList;

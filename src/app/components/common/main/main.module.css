@@ -1,0 +1,19 @@
+.main {
+  display: grid;
+  grid-template:
+    "blockquote   functions" auto
+    "services   functions" 1fr
+    / 1fr 1fr;
+  column-gap: 5rem;
+}
+
+@media (max-width: 730px) {
+  .main {
+    grid-template:
+      "blockquote"
+      "functions"
+      "services"
+      / 100%;
+    grid-row-gap: 5rem;
+  }
+}

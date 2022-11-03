@@ -1,6 +1,6 @@
 import s from "../../../../stylesModule/function.module.css";
 import React, { useEffect, useState } from "react";
-import TextField from "../../../forms/textField";
+import TextField from "../../../common/forms/textField";
 import { validator } from "../../../../utils/validator";
 
 const ApproveSalary = ({ choosedPerсent, approveSalary }) => {

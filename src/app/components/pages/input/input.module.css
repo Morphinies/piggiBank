@@ -1,0 +1,38 @@
+.formContainer {
+  background-color: rgb(48, 48, 48);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 3px;
+  font-size: 1.15rem;
+  padding: 3vh 5vw;
+  max-width: 60%;
+}
+
+.formContainer * {
+  color: white;
+  width: 100%;
+}
+
+.titleContainer {
+  margin-bottom: 3rem;
+}
+
+.title {
+  letter-spacing: 0.2rem;
+}
+
+@media (max-width: 970px) {
+  .formContainer {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 660px) {
+  .formBtns {
+    width: 100%;
+  }
+  .formContainer {
+    max-width: 100%;
+  }
+}
