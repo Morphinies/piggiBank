@@ -1,4 +1,4 @@
-import s from "../../../../stylesModule/function.module.css";
+import s from "../../wantFeatures.module.css";
 import React from "react";
 
 const Result = ({ percent, salary, back, calculations }) => {

@@ -3,15 +3,15 @@ import App from "./app/App";
 import "./style/style.css";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import UserPage from "./app/components/pages/userPage";
-import WantTravel from "./app/components/pages/wantFeatures/wantTravel";
-import WantCar from "./app/components/pages/wantFeatures/wantCar";
-import WantHome from "./app/components/pages/wantFeatures/wantHome";
-import WantPension from "./app/components/pages/wantFeatures/wantPension";
 import Expenses from "./app/components/personal/features/expenses";
 import Income from "./app/components/personal/features/income";
 import RegPage from "./app/components/pages/input/regPage";
 import AuthPage from "./app/components/pages/input/authPage";
+import UserPage from "./app/components/pages/userPage/userPage";
+import WantCar from "./app/components/pages/wantFeatures/wantCar/wantCar";
+import WantPension from "./app/components/pages/wantFeatures/wantPension/wantPension";
+import WantHome from "./app/components/pages/wantFeatures/wantHome/wantHome";
+import WantTravel from "./app/components/pages/wantFeatures/wantTravel/wantTravel";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

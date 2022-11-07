@@ -1,20 +1,18 @@
-import TextField from "../../common/forms/textField";
 import { validator } from "../../../utils/validator";
-import PasField from "../../common/forms/pasField";
 import React, { useEffect, useState } from "react";
 import Header from "../../common/header/header";
 import Footer from "../../common/footer/footer";
 import { useNavigate } from "react-router-dom";
-import Submit from "../../common/forms/submit";
-import s from "./input.module.css";
+import Submit from "../../common/inputFields/submit";
+import s from "./form.module.css";
 import api from "../../../api";
+import InputField from "../../common/inputFields/InputField";
 
 const AuthPage = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     password: "",
-    config: {},
   });
 
   const [errors, setErrors] = useState({});
@@ -45,6 +43,8 @@ const AuthPage = () => {
 
   const isValid = Object.keys(errors).length === 0;
 
+  // end of validation
+
   const handleChange = ({ target }) => {
     setData((prevState) => ({ ...prevState, [target.name]: target.value }));
   };
@@ -65,36 +65,26 @@ const AuthPage = () => {
   return (
     <div className="wrapper">
       <Header />
-
-      <div className="content">
-        <div className={s.formContainer}>
-          <div className={s.titleContainer}>
-            <h1 className={s.title}>Вход</h1>
-          </div>
-          <form>
-            <TextField
-              type="text"
-              handleChange={handleChange}
-              name="email"
-              label="Эл. почта"
-              error={errors.email}
-            />
-            <PasField
-              type="text"
-              handleChange={handleChange}
-              label="Пароль"
-              name="password"
-              error={errors.password}
-            />
-            <Submit
-              name="Войти"
-              isValid={isValid}
-              handleSubmit={handleSubmit}
-            />
-          </form>
-        </div>
-      </div>
-
+      <main className="content">
+        <form className={s.form}>
+          <h1 className={s.title}>Вход</h1>
+          <InputField
+            type="text"
+            handleChange={handleChange}
+            name="email"
+            label="Эл. почта"
+            error={errors.email}
+          />
+          <InputField
+            type="password"
+            handleChange={handleChange}
+            label="Пароль"
+            name="password"
+            error={errors.password}
+          />
+          <Submit name="Войти" isValid={isValid} handleSubmit={handleSubmit} />
+        </form>
+      </main>
       <Footer />
     </div>
   );

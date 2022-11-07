@@ -1,8 +1,8 @@
 import React from "react";
-import s from "../../stylesModule/userPage.module.css";
-import Header from "../common/header/header";
-import Footer from "../common/footer/footer";
-import FeatureLink from "../personal/features/featureLink";
+import s from "./userPage.module.css";
+import Header from "../../common/header/header";
+import Footer from "../../common/footer/footer";
+import FeatureLink from "../../personal/features/featureLink";
 
 const UserPage = () => {
   return (

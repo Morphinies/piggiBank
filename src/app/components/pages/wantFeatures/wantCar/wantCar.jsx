@@ -1,11 +1,11 @@
-import s from "../../../stylesModule/function.module.css";
+import s from "../wantFeatures.module.css";
 import ApprovedCar from "./carsQuiz/approvedCar";
 import PopUpWindow from "./carsQuiz/popUpWindow";
 import ChoosedCar from "./carsQuiz/choosedCar";
 import CarsList from "./carsQuiz/carsList";
 import React, { useState } from "react";
-import Header from "../../common/header/header";
-import Footer from "../../common/footer/footer";
+import Header from "../../../common/header/header";
+import Footer from "../../../common/footer/footer";
 
 const WantCar = () => {
   const [currentBlock, setCurrentBlock] = useState("cars");
@@ -40,13 +40,13 @@ const WantCar = () => {
   return (
     <>
       <div className={"wrapper " + (choosedPerсent && s.blur)}>
-        <Header page={"function"} />
+        <Header />
 
-        <main className="content">
-          {/*выбор машины */}
+        <main className={"content " + s.wantContent}>
+          {/* карточки с машинами */}
           {currentBlock === "cars" && <CarsList сhooseСar={сhooseСar} />}
 
-          {/*машина выбрана, но не утверждена */}
+          {/* машина выбрана */}
           {currentBlock === "car" && !carApproved && (
             <ChoosedCar
               changeCar={changeCar}
@@ -55,7 +55,7 @@ const WantCar = () => {
             />
           )}
 
-          {/*машина выбрана и утверждена */}
+          {/* машина утверждена */}
           {currentBlock === "car" && carApproved && (
             <ApprovedCar
               car={car}

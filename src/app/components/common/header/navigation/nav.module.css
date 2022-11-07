@@ -7,3 +7,9 @@
 .nav * {
   align-self: center;
 }
+
+@media (max-width: 730px) {
+  .nav {
+    grid-column-gap: 0rem;
+  }
+}

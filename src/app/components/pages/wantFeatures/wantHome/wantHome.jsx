@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "../../common/header/header";
+// import s from "./wantFeatures.module.css";
+import Header from "../../../common/header/header";
 
 const WantHome = () => {
   return (

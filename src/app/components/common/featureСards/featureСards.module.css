@@ -1,11 +1,12 @@
 .list {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 50%);
   grid-area: functions;
   display: grid;
   gap: 0.5rem;
 }
 
 #link {
+  border: 1px solid #303030;
   display: grid;
   row-gap: 1rem;
   padding: 1rem;
@@ -36,6 +37,12 @@
   max-width: 12rem;
   cursor: pointer;
   height: 7rem;
+}
+
+@media (max-width: 1200px) {
+  .list {
+    grid-template-columns: 100%;
+  }
 }
 
 @media (max-width: 360px) {

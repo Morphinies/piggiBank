@@ -36,3 +36,9 @@
 .author {
   grid-area: author;
 }
+
+@media (max-width: 730px) {
+  .blockquote {
+    border-radius: 0;
+  }
+}

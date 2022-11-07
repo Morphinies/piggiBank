@@ -1,5 +1,5 @@
-import s from "../../../../stylesModule/function.module.css";
-import cancel from "../../../../../img/cancel.svg";
+import s from "../../wantFeatures.module.css";
+import cancel from "../../../../../../img/cancel.svg";
 import ApprovePercent from "./approvePercent";
 import React, { useState } from "react";
 import ApproveSalary from "./approveSalary";

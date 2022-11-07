@@ -1,12 +1,34 @@
-/* карточки с машинами */
+/* ~~~ */
+.wantContent {
+  display: grid;
+}
+
 .title {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.carsList {
+.carBtn {
   display: grid;
+}
+
+.carBtn * {
+  justify-self: center;
+  align-self: center;
+  transition: all 0.5s;
+  grid-template-rows: 70% 30%;
+}
+
+.carBtn:hover * {
+  cursor: pointer;
+  color: #eaeaea;
+}
+
+/* карточки с машинами */
+
+.carsList {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  display: grid;
   gap: 0.5rem;
 }
 
@@ -15,21 +37,15 @@
 }
 
 .carName {
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.2rem;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.btn:hover * {
-  cursor: pointer;
-  color: white;
-}
-
-/* choosed car */
+/* машина выбрана */
 
 .choosedСarImg {
-  margin-right: auto;
-  margin-left: auto;
+  justify-self: center;
   max-width: 750px;
   cursor: default;
   display: block;
@@ -37,12 +53,10 @@
 }
 
 .navForCar {
-  display: flex;
+  align-self: flex-end;
+  justify-self: center;
   column-gap: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  margin-top: 3rem;
+  display: flex;
 }
 
 /* choosed car */
@@ -66,32 +80,32 @@
   margin-top: 2rem;
 }
 
-.calcBtns {
+.calccarBtns {
   margin: 3rem auto 0 auto;
 }
 
-.calcBtns * {
+.calccarBtns * {
   margin: 1rem auto;
   width: 100%;
   border: 1px solid #eaeaea;
   color: #eaeaea;
 }
 
-.calcBtns *:hover {
+.calccarBtns *:hover {
   background-color: #eaeaea;
   color: rgb(48, 48, 48);
 }
 
-.calcBtn:nth-child(1) {
+.calccarBtn:nth-child(1) {
   width: 40%;
 }
-.calcBtn:nth-child(2) {
+.calccarBtn:nth-child(2) {
   width: 60%;
 }
-.calcBtn:nth-child(3) {
+.calccarBtn:nth-child(3) {
   width: 80%;
 }
-.calcBtn:nth-child(4) {
+.calccarBtn:nth-child(4) {
   width: 100%;
 }
 
@@ -230,8 +244,21 @@
 }
 
 /* media */
+@media (max-width: 900px) {
+  .carsList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 @media (max-width: 660px) {
+  .carBtn {
+    border-left: none;
+    border-right: none;
+  }
+  .carsList {
+    grid-template-columns: 100%;
+    row-gap: 0;
+  }
   .popUp {
     right: 5%;
     left: 5%;
@@ -252,9 +279,6 @@
   .popUpNav {
     max-width: 100%;
     column-gap: 0.5rem;
-  }
-  .carsList {
-    grid-template-columns: 100%;
   }
   .calcBlock {
     width: 100%;

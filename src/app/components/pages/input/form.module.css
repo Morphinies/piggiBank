@@ -1,0 +1,38 @@
+.form {
+  background-color: rgb(48, 48, 48);
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem 4rem;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  display: flex;
+  row-gap: 1rem;
+  width: 60%;
+}
+
+.title {
+  letter-spacing: 0.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 1440px) {
+  .form {
+    width: 70%;
+  }
+}
+
+@media (max-width: 970px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 730px) {
+  .form {
+    padding: 2rem 1rem;
+    width: 100%;
+  }
+}

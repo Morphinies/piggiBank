@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import s from "./input.module.css";
+import s from "./form.module.css";
 import { validator } from "../../../utils/validator";
 import { useNavigate } from "react-router-dom";
-import TextField from "../../common/forms/textField";
-import PasField from "../../common/forms/pasField";
 import api from "../../../api";
 import Header from "../../common/header/header";
 import Footer from "../../common/footer/footer";
-import Submit from "../../common/forms/submit";
+import Submit from "../../common/inputFields/submit";
+import InputField from "../../common/inputFields/InputField";
 
 const RegPage = () => {
   const navigate = useNavigate();
@@ -58,7 +57,7 @@ const RegPage = () => {
             message: "Поле обязательно для заполнения",
           },
           equalsToPassword: {
-            message: "Повторный пароль не соответствует вышеуказанному",
+            message: "Пароль не соответствует вышеуказанному",
             pasValue: data.password,
           },
         },
@@ -96,56 +95,43 @@ const RegPage = () => {
     <div className="wrapper">
       <Header />
       <main className="content">
-        <div className={s.formContainer}>
-          <div className={s.titleContainer}>
-            <h1 className={s.title}>Регистрация</h1>
-          </div>
-          <form>
-            <TextField
-              type="text"
-              handleChange={handleChange}
-              name="name"
-              label="Имя"
-              error={errors.name}
-            />
-            <TextField
-              type="text"
-              handleChange={handleChange}
-              name="email"
-              label="Эл. почта"
-              error={errors.email}
-            />
-            <PasField
-              type="text"
-              handleChange={handleChange}
-              label="Пароль"
-              name="password"
-              error={errors.password}
-            />
-            <PasField
-              type="text"
-              handleChange={handleChange}
-              label="Повторите пароль"
-              name="repeatPassword"
-              error={errors.repeatPassword}
-            />
-            <Submit
-              name="Зарегистрироваться"
-              isValid={isValid}
-              handleSubmit={handleSubmit}
-            />
-            {/* <button
-              type="button"
-              onClick={handleSubmit}
-              className={s.btnForm + " btn " + (!isValid && s.btnDisabled)}
-              disabled={!isValid && "disabled"}
-            >
-              Зарегистрироваться
-            </button> */}
-          </form>
-        </div>
+        <form className={s.form}>
+          <h1 className={s.title}>Регистрация</h1>
+          <InputField
+            type="text"
+            handleChange={handleChange}
+            name="name"
+            label="Имя"
+            error={errors.name}
+          />
+          <InputField
+            type="text"
+            handleChange={handleChange}
+            name="email"
+            label="Эл. почта"
+            error={errors.email}
+          />
+          <InputField
+            type="password"
+            handleChange={handleChange}
+            label="Пароль"
+            name="password"
+            error={errors.password}
+          />
+          <InputField
+            type="password"
+            handleChange={handleChange}
+            label="Повторите пароль"
+            name="repeatPassword"
+            error={errors.repeatPassword}
+          />
+          <Submit
+            name="Зарегистрироваться"
+            isValid={isValid}
+            handleSubmit={handleSubmit}
+          />
+        </form>
       </main>
-
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
-import s from "../../../../stylesModule/function.module.css";
+import s from "../../wantFeatures.module.css";
 import React, { useEffect, useState } from "react";
-import TextField from "../../../common/forms/textField";
-import { validator } from "../../../../utils/validator";
+import { validator } from "../../../../../utils/validator";
+import InputField from "../../../../common/inputFields/InputField";
 
 const ApproveSalary = ({ choosedPerсent, approveSalary }) => {
   const [data, setData] = useState({
@@ -56,7 +56,7 @@ const ApproveSalary = ({ choosedPerсent, approveSalary }) => {
       </div>
       <h2 className={s.popUpQuestion}>Итак, что по З/П?</h2>
       <form className={s.salaryForm}>
-        <TextField
+        <InputField
           handleChange={handleChange}
           name="salary"
           label="руб./мес."

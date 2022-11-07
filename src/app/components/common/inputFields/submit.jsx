@@ -1,4 +1,4 @@
-import s from "./form.module.css";
+import s from "./input.module.css";
 import React from "react";
 
 const Submit = ({ name, isValid, handleSubmit }) => {
@@ -6,7 +6,7 @@ const Submit = ({ name, isValid, handleSubmit }) => {
     <button
       type="button"
       onClick={handleSubmit}
-      className={s.btnForm + " btn " + (!isValid && s.btnDisabled)}
+      className={s.submit + " btn " + (!isValid && s.btnDisabled)}
       disabled={!isValid && "disabled"}
     >
       {name}

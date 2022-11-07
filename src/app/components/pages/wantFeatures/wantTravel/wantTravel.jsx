@@ -1,6 +1,6 @@
 import React from "react";
-import s from "../../../stylesModule/function.module.css";
-import Header from "../../common/header/header";
+import s from "../wantFeatures.module.css";
+import Header from "../../../common/header/header";
 
 const WantTravel = () => {
   return (

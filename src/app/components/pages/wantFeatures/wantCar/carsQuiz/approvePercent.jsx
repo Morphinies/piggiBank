@@ -1,6 +1,6 @@
-import s from "../../../../stylesModule/function.module.css";
-import fireBlack from "../../../../../img/fireBlack.svg";
-import fireRed from "../../../../../img/fireRed.svg";
+import s from "../../wantFeatures.module.css";
+import fireBlack from "../../../../../../img/fireBlack.svg";
+import fireRed from "../../../../../../img/fireRed.svg";
 import React from "react";
 
 const ApprovePercent = ({ choosedPerсent, closeWindow, approvePercent }) => {

@@ -1,7 +1,7 @@
-import s from "../../../../stylesModule/function.module.css";
+import s from "../../wantFeatures.module.css";
 import React, { useState, useEffect } from "react";
-import api from "../../../../api";
-import Loading from "../../../common/loading/loading";
+import Loading from "../../../../common/loading/loading";
+import api from "../../../../../api";
 
 const CarsList = ({ сhooseСar }) => {
   const [loading, setLoading] = useState(true);
@@ -27,9 +27,9 @@ const CarsList = ({ сhooseСar }) => {
               <button
                 key={carItem.name}
                 onClick={() => сhooseСar(carItem)}
-                className={"btn " + s.btn}
+                className={"btn " + s.carBtn}
               >
-                <img className={s.carImg} src={carItem.img} alt="imgOfCar" />
+                <img className={s.carImg} src={carItem.img} alt="" />
                 <p className={s.carName}>{carItem.name}</p>
               </button>
             ))}
